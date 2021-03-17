@@ -1,0 +1,13 @@
+<div class="container" style="width:700px; margin-top: 10px">  
+        <div  ng-controller="dashboardController" style="margin-top: 75px; margin-bottom: 10px; background: transparent;">  
+            <form ng-submit="searchBrandNameInApi(country)">
+         <input type="text" name="country" id="country" ng-model="country" ng-keyup="complete(country)" class="form-control" placeholder="Search by Brand Name"/>  
+         <ul style="width:700px; height: 80px; overflow: auto;" class="list-group" ng-model="hidethis" ng-hide="hidethis">  
+              <li  class="list-group-item" ng-repeat="countrydata in filterCountry" ng-click="fillTextbox(countrydata)">{{countrydata}} </li>  
+              <li> </li>  
+         </ul>
+         <button style="width: 150px; margin-top: 5px; margin-left: 250px;" ng-hide="!hidethis">Search</button>  
+         
+        </form> 
+    </div>  
+</div>  
